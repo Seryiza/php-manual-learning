@@ -1,0 +1,10 @@
+version: '3'
+services:
+    php:
+        build: .
+        ports:
+            - 8080:80
+        volumes:
+            - ./:/code:ro
+        working_dir: /code
+        command: php -S 0.0.0.0:80
